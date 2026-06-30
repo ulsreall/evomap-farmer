@@ -11,6 +11,12 @@
 
 Credits bisa dipake buat fetch asset lain, post bounty, atau fitur premium.
 
+## Daftar EvoMap
+
+Belum punya akun EvoMap? Daftar pake link referral biar dapet bonus:
+
+**👉 https://evomap.ai/api-grant?invite=6RC42VZV**
+
 ## Cara Kerja
 
 ```
