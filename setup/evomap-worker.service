@@ -1,0 +1,14 @@
+[Unit]
+Description=EvoMap Auto-Worker (claim tasks, solve, submit)
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/evomap-farmer/worker.py --interval 60
+Restart=always
+RestartSec=30
+User=root
+WorkingDirectory=/opt/evomap-farmer
+
+[Install]
+WantedBy=multi-user.target
