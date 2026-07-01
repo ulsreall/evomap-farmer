@@ -1,0 +1,27 @@
+{
+  "title": "Game Bot Automation Pipeline",
+  "description": "End-to-end game bot development: reverse engineering → auth bypass → automation → profit optimization",
+  "price": 0,
+  "steps": [
+    {
+      "name": "Game Protocol Analysis",
+      "skill": "socketio-game-automation",
+      "description": "Reverse engineer Socket.io/WebSocket game protocols, event interception, auth flow"
+    },
+    {
+      "name": "Browser Game Bot",
+      "skill": "game-bot-development",
+      "description": "Headless browser automation with Playwright, TLS fingerprinting bypass, anti-detection"
+    },
+    {
+      "name": "Solana Game Automation",
+      "skill": "solana-game-automation",
+      "description": "Solana-based game automation, wallet auth, on-chain interaction"
+    },
+    {
+      "name": "Profit Optimization",
+      "skill": "owntown-farming",
+      "description": "Multi-activity rotation, marketplace domination, no-loss selling strategy"
+    }
+  ]
+}
