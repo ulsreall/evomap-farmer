@@ -6,10 +6,10 @@
       "id": "gene_gep_repair_from_errors",
       "category": "repair",
       "signals_match": [
-        "error|错误|异常|エラー|오류",
-        "exception|异常|例外|예외",
-        "failed|失败|失敗|실패|fail",
-        "unstable|不稳定|不安定|불안정",
+        "error|\u9519\u8bef|\u5f02\u5e38|\u30a8\u30e9\u30fc|\uc624\ub958",
+        "exception|\u5f02\u5e38|\u4f8b\u5916|\uc608\uc678",
+        "failed|\u5931\u8d25|\u5931\u6557|\uc2e4\ud328|fail",
+        "unstable|\u4e0d\u7a33\u5b9a|\u4e0d\u5b89\u5b9a|\ubd88\uc548\uc815",
         "log_error",
         "test_failure"
       ],
@@ -41,11 +41,11 @@
       "id": "gene_gep_optimize_prompt_and_assets",
       "category": "optimize",
       "signals_match": [
-        "protocol|协议|プロトコル|프로토콜",
+        "protocol|\u534f\u8bae|\u30d7\u30ed\u30c8\u30b3\u30eb|\ud504\ub85c\ud1a0\ucf5c",
         "gep",
-        "prompt|提示词|提示|プロンプト|프롬프트",
-        "audit|审计|監査|감사",
-        "reusable|可复用|再利用|재사용"
+        "prompt|\u63d0\u793a\u8bcd|\u63d0\u793a|\u30d7\u30ed\u30f3\u30d7\u30c8|\ud504\ub86c\ud504\ud2b8",
+        "audit|\u5ba1\u8ba1|\u76e3\u67fb|\uac10\uc0ac",
+        "reusable|\u53ef\u590d\u7528|\u518d\u5229\u7528|\uc7ac\uc0ac\uc6a9"
       ],
       "preconditions": [
         "need stricter, auditable evolution protocol outputs"
@@ -75,12 +75,12 @@
       "id": "gene_gep_innovate_from_opportunity",
       "category": "innovate",
       "signals_match": [
-        "user_feature_request|功能请求|機能リクエスト|기능요청",
-        "user_improvement_suggestion|改进建议|改善提案|개선제안",
-        "perf_bottleneck|性能瓶颈|パフォーマンス|성능병목",
-        "capability_gap|能力缺口|機能ギャップ|역량공백",
+        "user_feature_request|\u529f\u80fd\u8bf7\u6c42|\u6a5f\u80fd\u30ea\u30af\u30a8\u30b9\u30c8|\uae30\ub2a5\uc694\uccad",
+        "user_improvement_suggestion|\u6539\u8fdb\u5efa\u8bae|\u6539\u5584\u63d0\u6848|\uac1c\uc120\uc81c\uc548",
+        "perf_bottleneck|\u6027\u80fd\u74f6\u9888|\u30d1\u30d5\u30a9\u30fc\u30de\u30f3\u30b9|\uc131\ub2a5\ubcd1\ubaa9",
+        "capability_gap|\u80fd\u529b\u7f3a\u53e3|\u6a5f\u80fd\u30ae\u30e3\u30c3\u30d7|\uc5ed\ub7c9\uacf5\ubc31",
         "stable_success_plateau",
-        "external_opportunity|外部机会|外部機会|외부기회",
+        "external_opportunity|\u5916\u90e8\u673a\u4f1a|\u5916\u90e8\u6a5f\u4f1a|\uc678\ubd80\uae30\ud68c",
         "bounty_task"
       ],
       "preconditions": [
@@ -106,7 +106,29 @@
       "validation": [
         "node scripts/validate-modules.js ./src/evolve ./src/gep/solidify ./src/gep/policyCheck ./src/gep/mutation ./src/gep/personality",
         "node scripts/validate-suite.js"
-      ]
+      ],
+      "learning_history": [
+        {
+          "at": "2026-07-01T05:22:52.020Z",
+          "outcome": "success",
+          "mode": "none",
+          "reason_class": "unknown",
+          "retryable": false,
+          "learning_signals": [
+            "evolution_stagnation_detected"
+          ]
+        }
+      ],
+      "epigenetic_marks": [
+        {
+          "context": "linux/x64/v22.22.2",
+          "boost": 0.1,
+          "reason": "success_in_environment",
+          "created_at": "2026-07-01T05:22:52.022Z"
+        }
+      ],
+      "schema_version": "1.12.1",
+      "asset_id": "sha256:68785c109a920b42d29e59750402df6e5cf5f8fced63e897827721be141cc595"
     },
     {
       "type": "Gene",
@@ -116,8 +138,8 @@
       "signals_match": [
         "high_tool_usage:exec",
         "repeated_tool_usage:exec",
-        "tool_bypass|工具绕过|ツール迂回|도구우회",
-        "tool_loop|工具循环|ツールループ|도구반복",
+        "tool_bypass|\u5de5\u5177\u7ed5\u8fc7|\u30c4\u30fc\u30eb\u8fc2\u56de|\ub3c4\uad6c\uc6b0\ud68c",
+        "tool_loop|\u5de5\u5177\u5faa\u73af|\u30c4\u30fc\u30eb\u30eb\u30fc\u30d7|\ub3c4\uad6c\ubc18\ubcf5",
         "high_tool_usage"
       ],
       "preconditions": [
@@ -212,7 +234,7 @@
       "id": "gene_tool_integrity",
       "category": "repair",
       "signals_match": [
-        "tool_bypass|工具绕过|ツール迂回|도구우회"
+        "tool_bypass|\u5de5\u5177\u7ed5\u8fc7|\u30c4\u30fc\u30eb\u8fc2\u56de|\ub3c4\uad6c\uc6b0\ud68c"
       ],
       "preconditions": [
         "agent used shell/exec to perform an action that a registered tool can handle"
@@ -249,17 +271,17 @@
         "publish_markdown_to_feishu",
         "create_feishu_doc",
         "export_report_to_feishu",
-        "把结果发到飞书文档",
-        "发布飞书文档",
-        "把报告导出到飞书",
+        "\u628a\u7ed3\u679c\u53d1\u5230\u98de\u4e66\u6587\u6863",
+        "\u53d1\u5e03\u98de\u4e66\u6587\u6863",
+        "\u628a\u62a5\u544a\u5bfc\u51fa\u5230\u98de\u4e66",
         "publish results to a feishu doc",
         "export notes to lark document",
-        "飞书文档",
-        "发布到飞书",
-        "导出到飞书",
-        "发到飞书",
-        "lark文档",
-        "飞书文档|lark doc|feishu doc"
+        "\u98de\u4e66\u6587\u6863",
+        "\u53d1\u5e03\u5230\u98de\u4e66",
+        "\u5bfc\u51fa\u5230\u98de\u4e66",
+        "\u53d1\u5230\u98de\u4e66",
+        "lark\u6587\u6863",
+        "\u98de\u4e66\u6587\u6863|lark doc|feishu doc"
       ],
       "strategy": [
         "Verify the toolchain: run `lark-cli doctor` and require ok:true with at least one ready identity",
@@ -307,8 +329,8 @@
         "create_commit",
         "commit_changes",
         "conventional_commit",
-        "提交代码",
-        "生成提交信息",
+        "\u63d0\u4ea4\u4ee3\u7801",
+        "\u751f\u6210\u63d0\u4ea4\u4fe1\u606f",
         "write a commit message",
         "stage and commit"
       ],
@@ -356,8 +378,8 @@
         "bugbot_review",
         "wait_for_ci_review",
         "pr_review_gate",
-        "等bugbot",
-        "等待评审",
+        "\u7b49bugbot",
+        "\u7b49\u5f85\u8bc4\u5ba1",
         "check bugbot",
         "review the pr",
         "pr opened"
@@ -365,7 +387,7 @@
       "strategy": [
         "Poll the \"Cursor Bugbot\" check via `gh pr view --json statusCheckRollup` every ~60s until status=COMPLETED (cap ~10min); filter by name, not index",
         "On SUCCESS: safe to merge ONLY if no other required check is red AND zero open inline comments from the cursor[bot] login (note the [bot] suffix)",
-        "On NEUTRAL: do NOT treat as pass — fetch inline comments `gh api repos/:o/:r/pulls/:n/comments` filtered to user.login==\"cursor[bot]\", surface path/line/severity, hand back to the human",
+        "On NEUTRAL: do NOT treat as pass \u2014 fetch inline comments `gh api repos/:o/:r/pulls/:n/comments` filtered to user.login==\"cursor[bot]\", surface path/line/severity, hand back to the human",
         "On FAILURE/ACTION_REQUIRED: surface findings, do not merge",
         "Auto-merge (squash + delete-branch) only when explicitly authorized AND conclusion is SUCCESS; merge conflicts/CI-red/required-review surface verbatim, never auto-fixed here"
       ],
@@ -405,9 +427,9 @@
         "upstream_timeout",
         "http_524",
         "request_timed_out",
-        "超时了",
-        "网关超时",
-        "遇到超时",
+        "\u8d85\u65f6\u4e86",
+        "\u7f51\u5173\u8d85\u65f6",
+        "\u9047\u5230\u8d85\u65f6",
         "retry on timeout",
         "operation timed out"
       ],
@@ -431,7 +453,7 @@
       "preconditions": [
         "a tool call / fetch / subagent / long command returned a gateway-class timeout (524/522/502/504)"
       ],
-      "summary": "Recover from a gateway/upstream timeout: retry the same call once, and if it still times out, decompose the work into parallel subagents and merge — never loop the monolithic call.",
+      "summary": "Recover from a gateway/upstream timeout: retry the same call once, and if it still times out, decompose the work into parallel subagents and merge \u2014 never loop the monolithic call.",
       "schema_version": "1.6.0",
       "epigenetic_marks": [],
       "learning_history": [],
@@ -453,8 +475,8 @@
         "github_webhook_listener",
         "bugbot_webhook",
         "passive_pr_notifications",
-        "设置webhook",
-        "部署webhook监听",
+        "\u8bbe\u7f6ewebhook",
+        "\u90e8\u7f72webhook\u76d1\u542c",
         "notify when bugbot finishes",
         "webhook tunnel"
       ],
@@ -2596,6 +2618,240 @@
       "synced_at": "2026-07-01T05:05:30.499Z",
       "schema_version": "1.12.1",
       "asset_id": "sha256:61c4611505deca261b3d6ab2f41cf0bcb45f98684241f4799aa13dad99a5c25d"
+    },
+    {
+      "type": "Gene",
+      "id": "gene_distilled_web3-security-audit-automation",
+      "category": "repair",
+      "signals_match": [
+        "web3_security_audit",
+        "smart_contract_vulnerability",
+        "cors_misconfiguration",
+        "api_key_exposure",
+        "defi_bug_class",
+        "blockchain_security",
+        "vulnerability_disclosure"
+      ],
+      "strategy": [
+        "Run web3-audit: scan for 10 DeFi bug classes including reentrancy, access control, oracle manipulation, and flash loan attacks using static analysis on the contract bytecode or source",
+        "Check CORS configuration: send a fetch with Origin: https://evil.com and verify Access-Control-Allow-Origin reflection and Access-Control-Allow-Credentials: true",
+        "Scan JS bundles: download all JavaScript chunks from the target, grep for API keys matching patterns like (sk-[a-zA-Z0-9]+|pk_[a-zA-Z0-9]+|[a-zA-Z0-9]{32,45}) and validate against known providers",
+        "Test Firebase endpoints: check for exposed Firebase Admin SDK custom tokens at /api/auth/login or similar endpoints, verify if they can be used to mint Firebase custom tokens",
+        "Check for Spring Boot Actuator exposure: probe /actuator, /actuator/health, /actuator/env, /actuator/loggers endpoints without authentication",
+        "Verify subdomain takeover: check CNAME records for unclaimed cloud services (AWS S3, Heroku, GitHub Pages, etc.)",
+        "Document all findings with severity, business impact, reproduction steps, and PoC evidence",
+        "Generate a professional vulnerability disclosure report following Bugcrowd/HackerOne/Immunefi format"
+      ],
+      "validation": [
+        "node --version"
+      ],
+      "constraints": {
+        "max_files": 12,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ]
+      },
+      "preconditions": [
+        "Target URL or contract address is accessible",
+        "Node.js >= 18 is available for running audit scripts",
+        "Target allows automated scanning in their bug bounty scope"
+      ],
+      "summary": "Automated Web3 security audit pipeline: scan smart contracts for 10 DeFi bug classes, detect CORS misconfigurations, identify exposed API keys in JS bundles, and generate professional vulnerability reports with PoC evidence",
+      "schema_version": "1.6.0",
+      "epigenetic_marks": [],
+      "learning_history": [],
+      "anti_patterns": [],
+      "routing_hint": {
+        "tier": "mid",
+        "reasoning_level": "medium"
+      },
+      "tool_policy": null,
+      "_distilled_meta": {
+        "distilled_at": "2026-07-01T05:23:19.294Z",
+        "source_capsule_count": 94,
+        "data_hash": "869eed189423eae8"
+      },
+      "asset_id": "sha256:1cd026bd3bc85c16e8bed4690a330280a45e8874d0842090597d43287f8fc0e4"
+    },
+    {
+      "id": "gene_distilled_game-bot-automation-framework",
+      "summary": "Complete game bot automation framework: reverse engineer WebSocket/Socket.io protocols, bypass TLS fingerprinting, automate Solana wallet auth, and optimize multi-activity farming with no-loss selling",
+      "category": "innovate",
+      "signals_match": [
+        "game_bot_automation",
+        "websocket_reverse_engineering",
+        "socketio_protocol",
+        "solana_wallet_auth",
+        "playwright_headless",
+        "tls_fingerprint_bypass",
+        "game_farming_optimization"
+      ],
+      "type": "Gene",
+      "schema_version": "1.6.0",
+      "strategy": [
+        "Intercept WebSocket/Socket.io traffic using browser DevTools or MITM proxy to capture handshake, auth flow, and game event messages",
+        "Reverse engineer the auth flow: identify wallet challenge-response pattern (nonce -> sign -> verify), determine if base58 or base64 signature encoding is required",
+        "Build a socket client implementing the game protocol with proper event handlers, reconnection logic, and exponential backoff",
+        "Handle TLS fingerprinting: if the server silently drops non-browser WebSocket clients, switch to Playwright headless Chromium for the bot driver",
+        "Implement multi-activity rotation: cycle between mining, fishing, combat, and crafting with fatigue-aware scheduling to avoid anti-cheat detection",
+        "Add marketplace intelligence: scan current listings, calculate optimal sell prices with 10% undercut, and implement no-loss floor pricing",
+        "Set up profit monitoring: track daily earnings, inventory value, and marketplace share; alert when bank withdrawal is available"
+      ],
+      "constraints": {
+        "max_files": 12,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ]
+      },
+      "validation": [
+        "node --version"
+      ],
+      "preconditions": [
+        "Game uses WebSocket or Socket.io for real-time communication",
+        "Node.js >= 18 is available",
+        "Target game has a play-to-earn or trading economy"
+      ],
+      "routing_hint": {
+        "tier": "mid",
+        "reasoning_level": "medium"
+      }
+    },
+    {
+      "id": "gene_distilled_cors-api-key-exposure-hunting",
+      "summary": "Systematic CORS misconfiguration and API key exposure hunting: scan targets for reflected origins with credentials, discover API keys in JS bundles, test Firebase endpoints, and verify Spring Boot Actuator exposure",
+      "category": "repair",
+      "signals_match": [
+        "cors_hunting",
+        "api_key_leak",
+        "bug_bounty_recon",
+        "js_bundle_analysis",
+        "firebase_exposure",
+        "spring_actuator_scan",
+        "security_misconfiguration"
+      ],
+      "type": "Gene",
+      "schema_version": "1.6.0",
+      "strategy": [
+        "Send HTTP OPTIONS request with Origin: https://evil.com and check if Access-Control-Allow-Origin reflects the origin",
+        "Verify if Access-Control-Allow-Credentials: true is set alongside the reflected origin for the exploitable combination",
+        "Download all JavaScript chunks by scanning HTML for <script src> tags and chasing dynamic imports",
+        "Run regex patterns against JS bundles for API keys: (sk-[a-zA-Z0-9]{20,}), (pk_[a-zA-Z0-9]{20,}), (AIzaSy[a-zA-Z0-9_-]{26,})",
+        "Validate each found key by pinging the corresponding API endpoint",
+        "Test for Firebase Admin SDK token leaks at POST /api/auth/login endpoints",
+        "Probe Spring Boot Actuator endpoints: /actuator, /actuator/env, /actuator/loggers",
+        "Document every finding with exact URL, HTTP request/response, and one-click PoC"
+      ],
+      "constraints": {
+        "max_files": 12,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ]
+      },
+      "validation": [
+        "node --version"
+      ],
+      "preconditions": [
+        "Target URL is accessible",
+        "Bug bounty program allows automated scanning",
+        "Node.js or Python is available"
+      ],
+      "routing_hint": {
+        "tier": "cheap",
+        "reasoning_level": "low"
+      }
+    },
+    {
+      "id": "gene_distilled_multi-chain-rpc-faucet-farming",
+      "summary": "Multi-chain testnet faucet farming: bypass Vercel/Cloudflare IP blocks, solve Turnstile CAPTCHAs via 2captcha, automate wallet generation, and batch-claim faucet tokens across L2 testnets",
+      "category": "innovate",
+      "signals_match": [
+        "testnet_faucet",
+        "multi_wallet_farming",
+        "turnstile_captcha_solving",
+        "vercel_bypass",
+        "l2_testnet",
+        "airdrop_farming",
+        "wallet_batch_generation"
+      ],
+      "type": "Gene",
+      "schema_version": "1.6.0",
+      "strategy": [
+        "Analyze the faucet page: identify CAPTCHA type, RPC endpoint, and claim API format",
+        "If protected by Vercel Security Checkpoint: use browser-based console automation instead of server-side scripts",
+        "For browser-based automation: open faucet page, solve Turnstile via 2captcha, submit claim via tRPC or REST API",
+        "Verify the claim by checking on-chain balance via RPC endpoint - HTTP 200 does not mean success",
+        "Generate multiple wallets using ethers.js, pre-fund with gas, rotate through faucet claim cycle",
+        "Implement rate limiting: respect faucet cooldown period, use multiple wallets for parallel claiming",
+        "Monitor faucet EOA balance to know when funds are depleted"
+      ],
+      "constraints": {
+        "max_files": 12,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ]
+      },
+      "validation": [
+        "node --version"
+      ],
+      "preconditions": [
+        "Target faucet is accessible from a browser",
+        "2captcha or anti-captcha API key with sufficient balance",
+        "Node.js >= 18 is available"
+      ],
+      "routing_hint": {
+        "tier": "cheap",
+        "reasoning_level": "low"
+      }
+    },
+    {
+      "id": "gene_distilled_bug-bounty-report-writing",
+      "summary": "Professional bug bounty report writing: structure findings with VRT-compliant severity, include business impact, provide one-click PoC with screenshots, and follow Bugcrowd/HackerOne/Immunefi submission standards",
+      "category": "optimize",
+      "signals_match": [
+        "bug_bounty_report",
+        "vulnerability_disclosure",
+        "poc_creation",
+        "severity_rating",
+        "bugcrowd_submission",
+        "hackerone_report",
+        "immunefi_finding"
+      ],
+      "type": "Gene",
+      "schema_version": "1.6.0",
+      "strategy": [
+        "Review the program's bounty scope and VRT to determine correct severity tier for each finding",
+        "Structure report with: Title, Vulnerability Type, Severity, Affected Asset, Description, Business Impact, Steps to Reproduce, PoC, Remediation",
+        "Write clear one-paragraph Description explaining the vulnerability - assume the triager has no context",
+        "Describe Business Impact in terms of real attacker value: data exposure, account takeover, fund loss",
+        "Write Steps to Reproduce as numbered instructions a triager can follow from a fresh browser session",
+        "Create PoC with exact curl command, HTTP request/response pair, or screenshot with visible URL bar",
+        "For Bugcrowd: use VRT categories and format as single copy-paste block with bold inline labels",
+        "For Immunefi: focus on smart contract vulnerability path with exact function call and transaction trace",
+        "For HackerOne: include CVSS 3.1 scoring, attach PoC as file, use built-in report template"
+      ],
+      "constraints": {
+        "max_files": 12,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ]
+      },
+      "validation": [
+        "node --version"
+      ],
+      "preconditions": [
+        "A valid vulnerability has been discovered and verified",
+        "The target's bug bounty program scope and rules have been reviewed",
+        "PoC evidence has been collected"
+      ],
+      "routing_hint": {
+        "tier": "cheap",
+        "reasoning_level": "low"
+      }
     }
   ]
 }
