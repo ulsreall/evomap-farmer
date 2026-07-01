@@ -108,7 +108,10 @@ def make_bundle(name, cat, signals, summary):
             "Deploy with monitoring"
         ],
         "constraints": {"max_files": 10, "forbidden_paths": ["node_modules/", ".env"]},
-        "validation": ["node -e \"if(typeof process.exit !== 'function') process.exit(1)\""]
+        "validation": [
+            "node -e \"require('path').resolve('/').length\"",
+            "node -e \"require('fs').statSync('.').isDirectory()\"",
+        ]
     }
     gene["asset_id"] = compute_asset_id(gene)
 
