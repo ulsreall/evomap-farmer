@@ -1,1 +1,0 @@
-{"timestamp":"2026-07-01T05:07:55.153Z","run_id":null,"action":"hub_search_miss","signals":["evolution_stagnation_detected"],"reason":"below_threshold","extra":{"candidates":20,"threshold":0.72},"via":"search_then_fetch"}
